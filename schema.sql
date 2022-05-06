@@ -41,3 +41,6 @@ DROP COLUMN species;
 -- Add column owner_id which is a foreign key referencing owners table
  ALTER TABLE animals 
  ADD owner_id INT references owners(id);
+
+ SAVEPOINT ADD_FOREIGN_KEY;
+ COMMIT;
