@@ -14,9 +14,23 @@ CREATE TABLE animals(
 ALTER TABLE animals 
     ADD species VARCHAR(15);
 
--- create owners table
+-- Create owners table
 CREATE TABLE owners (
     id INT GENERATED ALWAYS AS IDENTITY, 
     full_name VARCHAR(30), age INT, 
     PRIMARY KEY(id)
 );
+
+-- Create species table
+CREATE TABLE species(
+    id INT GENERATED ALWAYS AS IDENTITY, 
+    name VARCHAR(20), 
+    PRIMARY KEY(id)
+);
+
+-- Remove column species
+BEGIN
+
+ALTER TABLE animals
+DROP COLUMN species;
+
