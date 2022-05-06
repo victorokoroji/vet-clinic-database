@@ -17,7 +17,8 @@ ALTER TABLE animals
 -- Create owners table
 CREATE TABLE owners (
     id INT GENERATED ALWAYS AS IDENTITY, 
-    full_name VARCHAR(30), age INT, 
+    full_name VARCHAR(30),
+    age INT, 
     PRIMARY KEY(id)
 );
 
