@@ -46,6 +46,8 @@ DROP COLUMN species;
  COMMIT;
 
  -- Modify your inserted animals to include owner information (owner_id)
+ BEGIN
+
  UPDATE animals 
  SET owner_id = 1 WHERE name = 'Agumon';
 
@@ -75,3 +77,5 @@ DROP COLUMN species;
 
  UPDATE animals 
  SET owner_id = 5 WHERE name = 'Boarmon';
+
+ COMMIT

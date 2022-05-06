@@ -22,4 +22,7 @@ BEGIN
  ('Melody Pond', 77), 
  ('Dean Winchester', 14), 
  ('Jodie Whittaker', 38);
- COMMIT;
+
+ INSERT INTO species(name) 
+ VALUES('Pokemon'), ('Digimon');
+COMMIT;
