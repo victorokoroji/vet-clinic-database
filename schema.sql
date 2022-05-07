@@ -45,3 +45,11 @@ DROP COLUMN species;
 
  SAVEPOINT ADD_FOREIGN_KEY;
  COMMIT;
+
+-- Create vet table
+CREATE TABLE vet(
+    id INT GENERATED ALWAYS AS IDENTITY, 
+    name VARCHAR(15), 
+    age INT, 
+    date_of_graduation DATE
+);
