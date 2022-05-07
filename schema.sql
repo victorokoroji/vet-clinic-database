@@ -56,8 +56,8 @@ CREATE TABLE vets(
 
 -- create join table 
 CREATE TABLE specializations (
-   vet_id INT references vets(id),
    species_id INT references species(id)
+   vet_id INT references vets(id),
 );
 
 CREATE TABLE visits (
