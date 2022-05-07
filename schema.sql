@@ -47,9 +47,10 @@ DROP COLUMN species;
  COMMIT;
 
 -- Create vet table
-CREATE TABLE vet(
+CREATE TABLE vets(
     id INT GENERATED ALWAYS AS IDENTITY, 
-    name VARCHAR(15), 
+    name VARCHAR(25), 
     age INT, 
     date_of_graduation DATE
 );
+
