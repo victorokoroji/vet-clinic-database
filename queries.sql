@@ -140,9 +140,9 @@ ORDER BY visits.visit_date
 LIMIT 1;
 
 -- Details for most recent visit: animal information, vet information, and date of visit.
-SELECT animals.*, visits.visit_date, vets.* FROM animals
-JOIN visits ON animals.id = visits.animal_id 
-JOIN vets ON vets.id = visits.vet_id
+SELECT A.*, visits.visit_date, V.* FROM animals A
+JOIN visits ON visits.animal_id = A.id 
+JOIN vets V ON visits.vet_id = V.id
 ORDER BY visits.visit_date DESC 
 LIMIT 1;
 
