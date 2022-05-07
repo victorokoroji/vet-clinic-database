@@ -45,3 +45,26 @@ DROP COLUMN species;
 
  SAVEPOINT ADD_FOREIGN_KEY;
  COMMIT;
+
+-- Create vet table
+CREATE TABLE vets(
+    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, 
+    name VARCHAR(25), 
+    age INT,
+    date_of_graduation DATE
+);
+
+-- create join table 
+CREATE TABLE specializations (
+   species_id INT references species(id)
+   vet_id INT references vets(id),
+);
+
+CREATE TABLE visits (
+   animal_id INT references animals(id),
+   vet_id INT references vets(id),
+   visit_date DATE 
+);
+
+
+
