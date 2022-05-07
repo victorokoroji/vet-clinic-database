@@ -48,9 +48,15 @@ DROP COLUMN species;
 
 -- Create vet table
 CREATE TABLE vets(
-    id INT GENERATED ALWAYS AS IDENTITY, 
+    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, 
     name VARCHAR(25), 
-    age INT, 
+    age INT,
     date_of_graduation DATE
+);
+
+-- create join table 
+CREATE TABLE specializations (
+   vet_id INT REFERENCES vets(id),
+   species_id INT REFERENCES species(species_id)
 );
 
