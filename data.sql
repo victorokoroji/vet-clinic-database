@@ -84,6 +84,7 @@ VALUES(1, 1),
 (1, 3),
 (2, 4)
 
+-- Insert the following datas for visits
 INSERT INTO visits (vet_id, animal_id, visit_date) 
 VALUES (1, 1, '2020-05-24'),
 (3, 1, '2020-07-22'),
