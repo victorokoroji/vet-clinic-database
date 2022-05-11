@@ -73,3 +73,4 @@ ALTER TABLE owners ADD COLUMN email VARCHAR(120);
 BEGIN;
 CREATE INDEX owners_email_index ON owners(email);
 COMMIT;
+
